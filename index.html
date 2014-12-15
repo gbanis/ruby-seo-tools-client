@@ -9,7 +9,7 @@
 </head>
 <body ng-controller="MainCtrl as main" md-theme="red">
 
-  <div layout="column" layout-margin layout-padding layout-align="center center">
+  <div layout="column" layout-margin layout-align="center center">
     <md-whiteframe flex="80" flex-sm="95" class="md-whiteframe-z1" layout="row" layout-align="center center">
       <form ng-submit="main.generateAudit()" novalidate>
         <md-text-float label="url" ng-model="main.url" class="long"> </md-text-float>
@@ -18,18 +18,29 @@
       </form>
     </md-whiteframe>
 
-    <md-whiteframe flex="80" flex-sm="95" class="md-whiteframe-z1"  layout="column" layout-align="center center" layout-fill>
-      <span>Hi!</span>
+    <md-whiteframe flex="80" flex-sm="95" class="md-whiteframe-z1"  layout-fill>
+      <md-toolbar >
+        <h2 class="md-toolbar-tools">
+          <span>Audit Results</span>
+        </h2>
+      </md-toolbar>
+      <md-content style="height: 600px;">
+        <section>
+          <md-subheader class="md-primary">Title</md-subheader>
+          <md-list layout="column">
+            <md-item>
+              <md-item-content>
+                Title: {{main.results.title}}
+              </md-item-content>
+              <md-item-content>
+                Title contains keyword: {{main.results.title}}
+              </md-item-content>
+            </md-item>
+          </md-list>
+        </section>
+      </md-content>
     </md-whiteframe>
   </div>
-
-
-
-{{main.results}}
-
-
-
-
 
   <!-- Include Angular -->
   <script src="/bower_components/angular/angular.js"></script>
