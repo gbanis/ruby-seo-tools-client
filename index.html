@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ruby Seo Tools</title>
+  <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+  <link rel="stylesheet" href="/bower_components/angular-material/themes/red-theme.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="shortcut icon" href="/favicon.png">
+</head>
+<body ng-app="rubySeoTools" md-theme="red">
+  <div layout="column"layout-margin layout-fill layout-padding layout-align="center center" ng-congroller="AuditController as auditCtrl">
+      <form style="padding: 20px;">
+        <md-text-float label="url" ng-model="auditCtrl.url" class="long"> </md-text-float>
+        <md-text-float label="keyword" ng-model="auditCtrl.keyword" class="long"> </md-text-float>
+        <md-button class="md-raised md-primary">Run Analysis</md-button>
+      </form>
+  </div>
+
+
+
+
+
+
+
+
+  <script src="/bower_components/angular/angular.min.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="/bower_components/angular-aria/angular-aria.min.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="/bower_components/angular-animate/angular-animate.min.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="/bower_components/hammerjs/hammer.min.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="/bower_components/angular-route/angular-route.min.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="/bower_components/angular-material/angular-material.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+  <script src="/js/app.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="/js/audit.factory.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
