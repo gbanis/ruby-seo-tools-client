@@ -1,2 +1,1 @@
-ruby-seo-tools-client
-=====================
+# Ruby SEO Tools: Front-end Client
