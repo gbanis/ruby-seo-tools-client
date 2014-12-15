@@ -1,4 +1,4 @@
-angular.module('myApp', [])
+angular.module('myApp', ['ngMaterial'])
 
 .constant('ENDPOINT_URI', 'http://localhost:3000/')
 

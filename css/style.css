@@ -8,3 +8,5 @@ md-input-group.long > input {
   margin: 2em 0;
   line-height: 25px; }
 
+form {
+  padding: 20px;}

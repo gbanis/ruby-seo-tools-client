@@ -9,24 +9,24 @@
 </head>
 <body ng-controller="MainCtrl as main" md-theme="red">
 
-  <form ng-submit="main.generateAudit()" novalidate>
-    <div class="form-group">
-      <label>url</label>
-      <input type="text" class="form-control" ng-model="main.url" placeholder="Enter url">
-    </div>
-    <div class="form-group">
-      <label>keyword</label>
-      <input type="text" class="form-control" ng-model="main.keyword" placeholder="Enter keyword">
-    </div>
-    <button type="submit" class="btn btn-info btn-lg">Create</button>
-  </form>
+  <div layout="column" layout-margin layout-fill layout-padding layout-align="center center">
+    <form ng-submit="main.generateAudit()" novalidate>
+      <md-text-float label="url" ng-model="main.url" class="long"> </md-text-float>
+      <md-text-float label="keyword" ng-model="main.keyword" class="long"> </md-text-float>
+      <md-button type="submit" class="md-raised md-primary">Run Analysis</md-button>
+    </form>
+  </div>
 
   {{main.results}}
 
-
-
-  <script src="/bower_components/angular/angular.min.js" type="text/javascript" charset="utf-8" async defer></script>
-
-  <script src="/js/app.js" type="text/javascript" charset="utf-8" async defer></script>
+  <!-- Include Angular -->
+  <script src="/bower_components/angular/angular.js"></script>
+  <!-- Include Angular Material -->
+  <script src="/bower_components/angular-aria/angular-aria.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="/bower_components/hammerjs/hammer.js"></script>
+  <script src="/bower_components/angular-material/angular-material.js"></script>
+  <!-- Include Custom Scripts -->
+  <script src="/js/app.js"></script>
 </body>
 </html>
