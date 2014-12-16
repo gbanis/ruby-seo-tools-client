@@ -5,6 +5,7 @@ angular.module('myApp', ['ngMaterial'])
 .controller('MainCtrl', function (ENDPOINT_URI, $http) {
   var main = this;
 
+
   this.generateAudit = function (){
     var request_uri = ENDPOINT_URI + 'audits/';
     var data = {
@@ -23,7 +24,16 @@ angular.module('myApp', ['ngMaterial'])
     $http.get(request_uri)
     .success(function(response) {
       main.results = response;
+      getDescriptions();
     });
-  }
+  };
+
+  (function(){
+    var request_uri = ENDPOINT_URI + 'descriptions/';
+    $http.get(request_uri)
+    .success(function(response) {
+      main.descriptions = response;
+    });
+  })();
 
 });
