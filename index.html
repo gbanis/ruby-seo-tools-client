@@ -10,43 +10,40 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css">
 </head>
 <body ng-controller="MainCtrl as main" md-theme="red">
 
 <div class="container">
-  <form ng-submit="main.generateAudit()" novalidate>
-    <div class="row">
+  <!-- Form: Request an Audit -->
+  <div class="row">
+    <form ng-submit="main.generateAudit()" novalidate>
       <div class="col-md-4"><md-text-float label="url" ng-model="main.url" class="long"> </md-text-float></div>
       <div class="col-md-4"><md-text-float label="keyword" ng-model="main.keyword" class="long"> </md-text-float></div>
-      <div class="col-md-4"><md-button type="submit" class="md-raised md-primary">Run Analysis</md-button></div>
+      <div class="col-md-4"><md-button type="submit" class="md-raised md-primary" md-theme="green">Run Analysis</md-button></div>
+    </form>
+  </div>
+
+  <!-- Button: Dummy Data -->
+  <md-button ng-click="main.getLastAudit()" class="md-raised md-primary" md-theme="green">Get Dummy Data</md-button>
+
+  <!-- Audit Results -->
+  <div class="row">
+    <div class="col-md-12"><h2>Results</h2></div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12"><h3>Meta Data</h3></div>
     </div>
-  </form>
+    <div class="row">
+      <div class="col-md-12">
+        <div><strong>Title:</strong> {{main.results.title}}</div>
+        <div><strong>Meta Description:</strong> {{main.results.title}}</div>
+      </div>
+    </div>
+  </div>
 
-
-    <md-button md-theme="green" ng-click="main.getLastAudit()" class="md-raised md-primary">Get Dummy Data</md-button>
-
-    <md-whiteframe id="results" flex="80" flex-sm="95" class="md-whiteframe-z1" layout-fill>
-      <md-toolbar>
-        <h2 class="md-toolbar-tools">
-          <span>Audit Results</span>
-        </h2>
-      </md-toolbar>
-      <md-content style="height: 600px;">
-        <section>
-          <md-subheader class="md-primary">Title</md-subheader>
-          <md-list layout="column">
-            <md-item>
-              <md-item-content>
-                Title: {{main.results.title}}
-              </md-item-content>
-              <md-item-content>
-                Title contains keyword: {{main.results.title}}
-              </md-item-content>
-            </md-item>
-          </md-list>
-        </section>
-      </md-content>
-    </md-whiteframe>
 </div>
 
   <!-- Bootstrap -->
