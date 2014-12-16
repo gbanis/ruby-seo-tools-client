@@ -15,3 +15,11 @@ md-input-group.long > input {
 md-item {
   margin: 16px;
 }
+
+.green{
+  color: green;
+}
+
+.red {
+  color: red;
+}

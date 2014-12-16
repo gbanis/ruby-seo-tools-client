@@ -40,10 +40,29 @@
       <div class="col-md-12">
         <div><strong>Title:</strong> {{main.results.title}}</div>
         <div><strong>Meta Description:</strong> {{main.results.title}}</div>
+        <div>
+          <table class="table">
+            <tr>
+              <th>Metric</th>
+              <th>Result</th>
+            </tr>
+            <tr>
+              <td>Title contains keyword</td>
+              <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.title_contains_keyword]" class="fa"></i></td>
+            </tr>
+            <tr>
+              <td>Meta description contains keyword</td>
+              <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.meta_description_contains_keyword]" class="fa"></i></td>
+            </tr>
+
+          </table>
+
+
+        Title contains keyword: <i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.title_contains_keyword]" class="fa"></i> </div>
       </div>
     </div>
   </div>
-
+  {{main.results}}
 </div>
 
   <!-- Bootstrap -->
