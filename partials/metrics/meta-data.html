@@ -1,0 +1,41 @@
+
+<div class="row">
+  <div class="col-md-12"><h3>Meta Data</h3></div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div>
+      <table class="table">
+        <tr>
+          <th>Metric</th>
+          <th>Result</th>
+        </tr>
+        <tr>
+          <td>{{main.descriptions.path_contains_keyword}}</td>
+          <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.path_contains_keyword]" class="fa"></i></td>
+        </tr>
+        <tr>
+          <td>{{main.descriptions.path_no_underscores}}</td>
+          <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.path_no_underscores]" class="fa"></i></td>
+        </tr>
+        <tr>
+          <td>{{main.descriptions.title_contains_keyword}}</td>
+          <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.title_contains_keyword]" class="fa"></i></td>
+        </tr>
+        <tr>
+          <td>{{main.descriptions.title_good_length}}</td>
+          <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.title_good_length]" class="fa"></i></td>
+        </tr>
+        <tr>
+          <td>{{main.descriptions.meta_description_contains_keyword}}</td>
+          <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.meta_description_contains_keyword]" class="fa"></i></td>
+        </tr>
+        <tr>
+          <td>{{main.descriptions.meta_description_good_length}}</td>
+          <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.meta_description_good_length]" class="fa"></i></td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+</div>

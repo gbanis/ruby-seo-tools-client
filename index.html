@@ -15,60 +15,22 @@
 </head>
 <body ng-controller="MainCtrl as main" md-theme="red">
 
-<div class="container">
-  <!-- Form: Request an Audit -->
-  <div class="row">
-    <form ng-submit="main.generateAudit()" novalidate>
-      <div class="col-md-4"><md-text-float label="url" ng-model="main.url" class="long"> </md-text-float></div>
-      <div class="col-md-4"><md-text-float label="keyword" ng-model="main.keyword" class="long"> </md-text-float></div>
-      <div class="col-md-4"><md-button type="submit" class="md-raised md-primary" md-theme="green">Run Analysis</md-button></div>
-    </form>
+  <div class="container">
+    <!-- Form: Request an Audit -->
+    <div class="row" ng-include="'/partials/generate-audit-form-horizontal.html'"></div>
+
+    <!-- Button: Dummy Data -->
+    <md-button ng-click="main.getLastAudit()" class="md-raised md-primary" md-theme="green">Get Dummy Data</md-button>
+
+    <!-- Audit Results -->
+    <div id="results" ng-include="'/partials/audit-results.html'"  ng-show="main.resultsVisible"></div>
   </div>
 
-  <!-- Button: Dummy Data -->
-  <md-button ng-click="main.getLastAudit()" class="md-raised md-primary" md-theme="green">Get Dummy Data</md-button>
 
-  <!-- Audit Results -->
-  <div class="row">
-    <div class="col-md-12"><h2>Results</h2></div>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12"><h3>Meta Data</h3></div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div><strong>Title:</strong> {{main.results.title}}</div>
-        <div><strong>Meta Description:</strong> {{main.results.title}}</div>
-        <div>
-          <table class="table">
-            <tr>
-              <th>Metric</th>
-              <th>Result</th>
-            </tr>
-            <tr>
-              <td>{{main.descriptions.title_contains_keyword}}</td>
-              <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.title_contains_keyword]" class="fa"></i></td>
-            </tr>
-            <tr>
-              <td>{{main.descriptions.meta_description_contains_keyword}}</td>
-              <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.meta_description_contains_keyword]" class="fa"></i></td>
-            </tr>
-
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-  DESCRIPTIONS: {{main.descriptions}}
-  <br>
-  AUDIT: {{main.results}}
-</div>
-
-  <!-- Angular -->
-  <script src="/bower_components/angular/angular.js"></script>
   <!-- jQuery -->
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Angular -->
+  <script src="/bower_components/angular/angular.js"></script>
   <!-- Bootstrap -->
   <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- Angular Material -->
