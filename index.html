@@ -4,22 +4,29 @@
   <title>Ruby Seo Tools</title>
   <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
   <link rel="stylesheet" href="/bower_components/angular-material/themes/red-theme.css">
+  <link rel="stylesheet" href="/bower_components/angular-material/themes/green-theme.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="shortcut icon" href="/favicon.png">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
 </head>
 <body ng-controller="MainCtrl as main" md-theme="red">
 
-  <div layout="column" layout-margin layout-align="center center">
-    <md-whiteframe flex="80" flex-sm="95" class="md-whiteframe-z1" layout="row" layout-align="center center">
-      <form ng-submit="main.generateAudit()" novalidate>
-        <md-text-float label="url" ng-model="main.url" class="long"> </md-text-float>
-        <md-text-float label="keyword" ng-model="main.keyword" class="long"> </md-text-float>
-        <md-button type="submit" class="md-raised md-primary">Run Analysis</md-button>
-      </form>
-    </md-whiteframe>
+<div class="container">
+  <form ng-submit="main.generateAudit()" novalidate>
+    <div class="row">
+      <div class="col-md-4"><md-text-float label="url" ng-model="main.url" class="long"> </md-text-float></div>
+      <div class="col-md-4"><md-text-float label="keyword" ng-model="main.keyword" class="long"> </md-text-float></div>
+      <div class="col-md-4"><md-button type="submit" class="md-raised md-primary">Run Analysis</md-button></div>
+    </div>
+  </form>
 
-    <md-whiteframe flex="80" flex-sm="95" class="md-whiteframe-z1"  layout-fill>
-      <md-toolbar >
+
+    <md-button md-theme="green" ng-click="main.getLastAudit()" class="md-raised md-primary">Get Dummy Data</md-button>
+
+    <md-whiteframe id="results" flex="80" flex-sm="95" class="md-whiteframe-z1" layout-fill>
+      <md-toolbar>
         <h2 class="md-toolbar-tools">
           <span>Audit Results</span>
         </h2>
@@ -40,16 +47,18 @@
         </section>
       </md-content>
     </md-whiteframe>
-  </div>
+</div>
 
-  <!-- Include Angular -->
+  <!-- Bootstrap -->
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- Angular -->
   <script src="/bower_components/angular/angular.js"></script>
-  <!-- Include Angular Material -->
+  <!-- Angular Material -->
   <script src="/bower_components/angular-aria/angular-aria.js"></script>
   <script src="/bower_components/angular-animate/angular-animate.js"></script>
   <script src="/bower_components/hammerjs/hammer.js"></script>
   <script src="/bower_components/angular-material/angular-material.js"></script>
-  <!-- Include Custom Scripts -->
+  <!-- Custom Scripts -->
   <script src="/js/app.js"></script>
 </body>
 </html>

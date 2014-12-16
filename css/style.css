@@ -1,15 +1,19 @@
 
 md-input-group.long > input {
-  min-width: 300px; }
+  min-width: 300px;
+}
 
 .md-button {
   width:100%;
+  max-width: 300px;
   display: block;
   margin: 2em 0 1em;
-  line-height: 25px; }
+  line-height: 25px;
+}
 
 form {
-  padding: 20px;}
+  padding: 20px;
+}
 
 [layout-padding] > [flex] {
   padding: 15px;
@@ -17,4 +21,12 @@ form {
 
 [layout-margin] > [flex] {
   margin: 15px;
+}
+
+#results {
+  max-width: 900px
+}
+
+md-item {
+  margin: 16px;
 }

@@ -18,4 +18,12 @@ angular.module('myApp', ['ngMaterial'])
     });
   };
 
+  this.getLastAudit = function(){
+    var request_uri = ENDPOINT_URI + 'audits/';
+    $http.get(request_uri)
+    .success(function(response) {
+      main.results = response;
+    });
+  }
+
 });
