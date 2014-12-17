@@ -1,4 +1,4 @@
-angular.module('myApp', ['ngMaterial'])
+angular.module('myApp', [])
 
 .constant('ENDPOINT_URI', 'http://api.rubyseotools.com/')
 

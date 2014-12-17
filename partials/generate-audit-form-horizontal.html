@@ -1,5 +1,13 @@
-<form ng-submit="main.generateAudit()" novalidate>
-  <div class="col-md-4"><md-text-float label="url" ng-model="main.url" class="long"> </md-text-float></div>
-  <div class="col-md-4"><md-text-float label="keyword" ng-model="main.keyword" class="long"> </md-text-float></div>
-  <div class="col-md-4"><md-button type="submit" class="md-raised md-primary" md-theme="green">Run Analysis</md-button></div>
+<form ng-submit="main.generateAudit()" class="form-inline" role="form">
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon"><i class="fa fa-globe"></i></div>
+      <input type="url" class="form-control" placeholder="URL" ng-model="main.url">
+    </div>
+    <div class="input-group">
+      <div class="input-group-addon"><i class="fa fa-quote-right"></i></div>
+      <input type="text" class="form-control" placeholder="Keyword" ng-model="main.keyword">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-default">Generate</button>
 </form>
