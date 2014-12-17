@@ -18,8 +18,30 @@
           <td>{{main.descriptions.body_text_flesch_score_good}}</td>
           <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.body_text_flesch_score_good]" class="fa"></i></td>
         </tr>
-
-
+        <tr>
+          <td>Number of words in the page body</td>
+          <td>{{main.results.body_text_num_words}}</td>
+        </tr>
+        <tr>
+          <td>{{main.descriptions.body_text_num_words_good}}</td>
+          <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.body_text_num_words_good]" class="fa"></i></td>
+        </tr>
+        <tr>
+          <td>Number of times your keyword appears in the body</td>
+          <td>{{main.results.body_text_num_keyword_occurences}}</td>
+        </tr>
+        <tr>
+          <td>{{main.descriptions.body_text_num_keyword_occurences_good}}</td>
+          <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.body_text_num_keyword_occurences_good]" class="fa"></i></td>
+        </tr>
+        <tr>
+          <td>Keyword density</td>
+          <td>{{main.results.body_text_keyword_density * 100}} %</td>
+        </tr>
+        <tr>
+          <td>{{main.descriptions.body_text_keyword_density_good}}</td>
+          <td><i ng-class="{true:'fa-check green', false:'fa-close red'}[main.results.body_text_keyword_density_good]" class="fa"></i></td>
+        </tr>
       </table>
     </div>
   </div>
