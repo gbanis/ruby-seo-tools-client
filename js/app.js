@@ -1,6 +1,7 @@
 angular.module('myApp', [])
 
 .constant('ENDPOINT_URI', 'http://api.rubyseotools.com/')
+// .constant('ENDPOINT_URI', 'http://localhost:3000/')
 
 .controller('MainCtrl', function (ENDPOINT_URI, $http) {
   var main = this;

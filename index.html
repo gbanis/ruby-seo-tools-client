@@ -2,36 +2,38 @@
 <html ng-app="myApp">
 <head>
   <title>Ruby Seo Tools</title>
-  <link rel="stylesheet" href="/css/style.css">
   <link rel="shortcut icon" href="/favicon.png">
-  <!-- Bootstrap -->
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-  <!-- Fontawesome -->
   <link rel="stylesheet" href="/bower_components/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
-<body ng-controller="MainCtrl as main">
+<body>
 
-  <div class="container">
-    <!-- Form: Request an Audit -->
-    <div ng-include="'/partials/generate-audit-form-horizontal.html'"></div>
+    <div class="container" ng-controller="MainCtrl as main" >
 
-    <!-- Button: Dummy Data -->
+      <div class="row" id="header">
+        <div class="col-md-2" id="logo">
+          <img src="/assets/logo.png">
+        </div>
+        <div class="col-md-10" id="header-form">
+          <div ng-include="'/partials/generate-audit-form-horizontal.html'"></div>
+        </div>
 
-    <!-- <button ng-click="main.getLastAudit()"  class="btn btn-default">Dummy data</button> -->
+      </div>
 
-    <!-- Audit Results -->
-    <div id="results" ng-include="'/partials/audit-results.html'"  ng-show="main.resultsVisible"></div>
-  </div>
+      <!-- Button: Dummy Data -->
+      <!-- <button ng-click="main.getLastAudit()"  class="btn btn-default">Dummy data</button> -->
+
+      <!-- Audit Results -->
+      <div id="results" class="row" ng-include="'/partials/audit-results.html'"  ng-show="main.resultsVisible"></div>
+    </div>
 
 
-  <!-- jQuery -->
+
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-  <!-- Angular -->
   <script src="/bower_components/angular/angular.js"></script>
-  <!-- Bootstrap -->
-  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!-- Custom Scripts -->
   <script src="/js/app.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

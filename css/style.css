@@ -1,25 +1,25 @@
-
-md-input-group.long > input {
-  min-width: 300px;
-  width:100%;
+body{
+  background-color: #fcfcfc;
 }
-
-.md-button {
-  width:100%;
-  display: block;
-  margin: 2em 0 1em;
-  line-height: 25px;
+.container{
+  box-shadow: 0 0 100px #888888;
 }
-
-
-md-item {
-  margin: 16px;
+#header{
+  padding-top:15px;
+  padding-bottom:15px;
+  background: #eee;
 }
-
-.green{
-  color: green;
+#logo img{
+  height: 35px;
 }
-
+.input-group {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.green {
+  color: #5cb85c;
+}
 .red {
-  color: red;
+  color: #d9534f;
 }
