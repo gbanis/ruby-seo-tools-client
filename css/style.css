@@ -23,3 +23,39 @@ body{
 .red {
   color: #d9534f;
 }
+
+.feature-box{
+
+  box-shadow: 0 0 15px #ccc;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.feature-box h3{
+  text-align: center;
+  color: #c00;
+  padding-bottom:10px;
+}
+.feature-box p{
+  text-align: center;
+  font-size:18px;
+}
+#footer{
+  color: #999;
+  padding: 10px;
+  background-color: #eee;
+  text-align: center;
+}
+
+#generate-report-demo{
+  width: 80%;
+  margin: 40px 10%;
+  padding: 25px;
+  box-shadow: 0 0 15px #ccc;
+}
+
+#how-it-works-list{
+  text-align: center;
+  padding: 0 10%;
+}
