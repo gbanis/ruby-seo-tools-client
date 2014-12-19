@@ -26,6 +26,7 @@ angular.module('myApp', [])
       main.results = response;
       $('#generate-audit-form button').removeClass("disabled").html("Generate");
       showResults();
+
     });
   };
 
