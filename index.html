@@ -17,20 +17,15 @@
           <img src="/assets/logo.png">
         </div>
         <div class="col-md-10" id="header-form">
-          <div ng-include="'/partials/generate-audit-form-horizontal.html'"></div>
+          <div id="generate-audit-form" ng-include="'/partials/generate-audit-form-horizontal.html'"></div>
         </div>
       </div>
-
-      <!-- Button: Dummy Data -->
-      <!-- <button ng-click="main.getLastAudit()"  class="btn btn-default">Dummy data</button> -->
 
       <div id="results" class="row" ng-include="'/partials/audit-results.html'"  ng-show="main.resultsVisible"></div>
       <div class="row" ng-include="'/partials/about-blog-post-audit-tool.html'"></div>
 
       <div id="footer" class="row" ng-include="'/partials/footer.html'"></div>
     </div>
-
-
 
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/bower_components/angular/angular.js"></script>

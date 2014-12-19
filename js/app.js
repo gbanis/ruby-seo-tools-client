@@ -13,6 +13,8 @@ angular.module('myApp', [])
   };
 
   main.generateAudit = function (){
+
+    $('#generate-audit-form button').addClass("disabled").html('<i class="fa fa-spinner fa-spin"></i> Loading...');
     var request_uri = ENDPOINT_URI + 'audits/';
     var data = {
       url: main.url,
@@ -22,16 +24,7 @@ angular.module('myApp', [])
     $http.post(request_uri, data)
     .success(function(response) {
       main.results = response;
-      showResults();
-    });
-  };
-
-  main.getLastAudit = function(){
-    var request_uri = ENDPOINT_URI + 'audits/';
-    $http.get(request_uri)
-    .success(function(response) {
-      main.results = response;
-      showResults();
+      $('#generate-audit-form button').removeClass("disabled").html("Generate");
     });
   };
 
